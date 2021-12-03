@@ -3,7 +3,7 @@ GREEN=\033[0;32m
 BLUE=\033[36m
 NC=\033[0m
 
-day    := 1
+day    := $(shell date +%-d)
 dayp   := $(shell printf '%02d' $(day))
 filetd := day$(day).py
 comment:= ''
@@ -23,6 +23,7 @@ README: ## Update root README
 	@echo "${GREEN}README generated${NC}"
 
 DONE: README ## update README and push up to git
+	@cd ~/github/aoc2021
 	@git add .
 	@git commit -am "day ${day} ✅" -m "${comment}"
 	@git push

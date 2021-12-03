@@ -7,7 +7,7 @@ My solutions to this year's problems linked [here](https://adventofcode.com/2021
 Day | Problem                                                 | Part One   | Part Two   | 
 :-: | :-----------------------------------------------------: | :--------: | :--------: | 
 01  | [Sonar Sweep](https://adventofcode.com/2021/day/1)      | 134100     | 120196     | 
-02  | [](https://adventofcode.com/2021/day/2)                 |            |            | 
+02  | [Dive!](https://adventofcode.com/2021/day/2)            | 100881     | 96981      | 
 03  | [](https://adventofcode.com/2021/day/3)                 |            |            | 
 04  | [](https://adventofcode.com/2021/day/4)                 |            |            | 
 05  | [](https://adventofcode.com/2021/day/5)                 |            |            | 
@@ -33,4 +33,4 @@ Day | Problem                                                 | Part One   | Par
 25  | [](https://adventofcode.com/2021/day/25)                |            |            | 
 
 
-Auto-Generated at 2021-12-02 22:22:09.984799
+Auto-Generated at 2021-12-02 22:31:35.025377
