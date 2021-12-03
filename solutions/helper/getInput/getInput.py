@@ -21,7 +21,6 @@ def download(url: str, file_name: str):
 
 
 def create_source_file(d: int):
-    print('here', d)
     with open(f"day{d}.py", "w") as file:
         lines = [
             "from typing import List, Dict, Set\n",
