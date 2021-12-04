@@ -6,7 +6,7 @@ NC=\033[0m
 day    := $(shell date +%-d)
 dayp   := $(shell printf '%02d' $(day))
 filetd := day$(day).py
-comment:= ''
+comment:= ""
 
 run: ## Run solution for day=X (default based on day of month)
 	python3 ${filetd}

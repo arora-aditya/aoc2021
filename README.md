@@ -9,7 +9,7 @@ Day | Problem                                                       | Part One  
 01  | [Sonar Sweep](https://adventofcode.com/2021/day/1)            | 134100     | 120196     | 
 02  | [Dive!](https://adventofcode.com/2021/day/2)                  | 100881     | 96981      | 
 03  | [Binary Diagnostic](https://adventofcode.com/2021/day/3)      | 111        | 210        | 
-04  | [](https://adventofcode.com/2021/day/4)                       |            |            | 
+04  | [Giant Squid](https://adventofcode.com/2021/day/4)            | 7668       | 7119       | 
 05  | [](https://adventofcode.com/2021/day/5)                       |            |            | 
 06  | [](https://adventofcode.com/2021/day/6)                       |            |            | 
 07  | [](https://adventofcode.com/2021/day/7)                       |            |            | 
@@ -33,4 +33,4 @@ Day | Problem                                                       | Part One  
 25  | [](https://adventofcode.com/2021/day/25)                      |            |            | 
 
 
-Auto-Generated at 2021-12-03 00:13:41.551023
+Auto-Generated at 2021-12-04 02:00:36.560938
