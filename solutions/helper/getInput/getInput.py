@@ -15,9 +15,10 @@ def download(url: str, file_name: str):
     cookies = {
         "session": get_cookie()
     }
-    with open(file_name, "wb") as file:
-        response = get(url, cookies=cookies)
-        file.write(response.content)
+    response = get(url, cookies=cookies)
+    if not response.content.startswith(b"Please don't"):
+        with open(file_name, "wb") as file:
+            file.write(response.content)
 
 
 def create_source_file(d: int):

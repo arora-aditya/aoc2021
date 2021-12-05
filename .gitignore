@@ -132,3 +132,4 @@ bin/
 lib/
 share/
 .idea/
+*.ipynb
