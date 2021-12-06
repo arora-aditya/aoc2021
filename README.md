@@ -11,7 +11,7 @@ Day | Problem                                                          | Part On
 03  | [Binary Diagnostic](https://adventofcode.com/2021/day/3)         | 111        | 210        | 
 04  | [Giant Squid](https://adventofcode.com/2021/day/4)               | 7668       | 7119       | 
 05  | [Hydrothermal Venture](https://adventofcode.com/2021/day/5)      | 347        | 718        | 
-06  | [](https://adventofcode.com/2021/day/6)                          |            |            | 
+06  | [Lanternfish](https://adventofcode.com/2021/day/6)               | 722        | 101        | 
 07  | [](https://adventofcode.com/2021/day/7)                          |            |            | 
 08  | [](https://adventofcode.com/2021/day/8)                          |            |            | 
 09  | [](https://adventofcode.com/2021/day/9)                          |            |            | 
@@ -33,4 +33,4 @@ Day | Problem                                                          | Part On
 25  | [](https://adventofcode.com/2021/day/25)                         |            |            | 
 
 
-Auto-Generated at 2021-12-05 00:19:40.746034
+Auto-Generated at 2021-12-06 00:07:33.823645
