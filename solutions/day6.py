@@ -14,9 +14,9 @@ lines = read_file(DAY)
 
 # Part 1
 ##################################################
-def part1(lines: List[str]) -> int:
+def part1(lines: List[str], days=80) -> int:
     state = Counter(list(map(int, lines[0].split(","))))
-    for _ in range(80):
+    for _ in range(days):
         next_state = Counter()
         for k, ct in state.items():
             if k == 0:
@@ -35,17 +35,7 @@ submit(1, part1(lines), force=True)
 # Part 2
 ##################################################
 def part2(lines: List[str]) -> int:
-    state = Counter(list(map(int, lines[0].split(","))))
-    for _ in range(256):
-        next_state = Counter()
-        for k, ct in state.items():
-            if k == 0:
-                next_state[6] += ct
-                next_state[8] += ct
-            else:
-                next_state[k - 1] += ct
-        state = next_state.copy()
-    return sum(next_state.values())
+    return part1(lines, days=256)
 
 submit(2, part2(lines), force=True)
 
