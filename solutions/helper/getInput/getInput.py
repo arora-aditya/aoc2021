@@ -41,14 +41,14 @@ def create_source_file(d: int):
             "\ndef part1(lines: List[str]) -> int:",
             "\n    return float(\"inf\")",
             "\n"*2,
-            "submit(1, part1(lines))\n"
+            "submit(1, part1(lines), force=False)\n"
             "\n\n",
             "# Part 2\n",
             "#"*50,
             "\ndef part2(lines: List[str]) -> int:",
             "\n    return float(\"inf\")",
             "\n"*2,
-            "submit(2, part2(lines))\n"
+            "submit(2, part2(lines), force=False)\n"
             "\n\n",
         ]
         file.writelines(lines)
