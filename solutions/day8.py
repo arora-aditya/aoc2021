@@ -1,7 +1,6 @@
 from typing import List, Dict, Set
 from collections import *
 from functools import lru_cache
-from itertools import permutations
 from pprint import pprint as pp
 from math import *
 from helper.submit.submit import *
@@ -30,25 +29,65 @@ submit(1, part1(lines), force=False)
 # Part 2
 ##################################################
 def part2(lines: List[str]) -> int:
-    m = {"acedgfb":8, "cdfbe":5, "gcdfa":2, "fbcad":3, "dab":7,
-         "cefabd":9, "cdfgeb":6, "eafb":4, "cagedb":0, "ab":1}
-
-    m = {"".join(sorted(k)):v for k,v in m.items()}
-
-    ans = 0
+    su = 0
     for line in lines:
-        a,b = line.split(" | ")
-        a = a.split(" ")
-        b = b.split(" ")
-        for perm in permutations("abcdefg"):
-            pmap = {a:b for a,b in zip(perm,"abcdefg")}
-            anew = ["".join(pmap[c] for c in x) for x in a]
-            bnew = ["".join(pmap[c] for c in x) for x in b]
-            if all("".join(sorted(an)) in m for an in anew):
-                bnew = ["".join(sorted(x)) for x in bnew]
-                ans += int("".join(str(m[x]) for x in bnew))
-                break
-    return ans
+        words = line.split(" | ")[0].split(" ")
+        mapping = {}
+        one_segments = set()
+        seven_segments = set()
+        four_segments = set()
+        six_segments = set()
+        fives = []
+        for word in sorted(words, key=len):
+            se = set(list(word))
+            if len(word) == 2:
+                mapping["".join(sorted(word))] = 1
+                one_segments = se
+            elif len(word) == 3:
+                mapping["".join(sorted(word))] = 7
+                seven_segments = se
+            elif len(word) == 4:
+                mapping["".join(sorted(word))] = 4
+                four_segments = se
+            elif len(word) == 5:
+                fives.append(se)
+            elif len(word) == 6:
+
+                if not one_segments.issubset(se):
+                    mapping["".join(sorted(word))] = 6
+                    six_segments = se
+                elif four_segments.issubset(se):
+                    mapping["".join(sorted(word))] = 9
+                else:
+                    mapping["".join(sorted(word))] = 0
+            elif len(word) == 7:
+                mapping["".join(sorted(word))] = 8
+        assert len(fives) == 3
+        five_segments = set()
+        three_segments = set()
+        for f in fives:
+            if len(f - seven_segments) == 2:
+                mapping["".join(sorted(f))] = 3
+                three_segments = f
+                
+            if len(f - six_segments) == 0:
+                mapping["".join(sorted(f))] = 5
+                five_segments = f
+        for f in fives:
+            if f != three_segments and f != five_segments:
+                mapping["".join(sorted(f))] = 2
+
+        assert len(set(mapping.values())) == 10
+        words = line.split(" | ")[1].split(" ")
+        i = ""
+        for word in words:
+            i += str(mapping["".join(sorted(word))])
+        su += int(i)
+
+
+
+
+    return su
 
 submit(2, part2(lines), force=False)
 
