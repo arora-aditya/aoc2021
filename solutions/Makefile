@@ -12,13 +12,13 @@ run: ## Run solution for day=X (default based on day of month)
 	python3 ${filetd}
 
 input: ## Get input for day=X (default based on day of month)
-	@python3 helper/getInput/getInput.py ${day}
+	@python3 helper/getInput.py ${day}
 	@git add .
 	@code day${day}.py inputs/input${day}.txt ..
 	@echo "${GREEN}input stored in input${day}.txt${NC}"
 
 README: ## Update root README
-	@python3 helper/generateREADME/generateREADME.py
+	@python3 helper/generateREADME.py ${day}
 	@git add .
 	@echo "${GREEN}README generated${NC}"
 

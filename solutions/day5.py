@@ -3,7 +3,7 @@ from collections import *
 from functools import lru_cache
 from pprint import pprint as pp
 from math import *
-from helper.submit.submit import *
+from helper.submit import *
 from utils import *
 
 
@@ -27,7 +27,7 @@ def part1(lines: List[str]) -> int:
         cl = set()
         if x1 == x2:
             my, may = min(y1, y2), max(y1, y2)
-            for y in range(my,  may + 1):
+            for y in range(my, may + 1):
                 cl.add((x1, y))
         elif y1 == y2:
             mix, mx = min(x1, x2), max(x1, x2)
@@ -40,9 +40,9 @@ def part1(lines: List[str]) -> int:
     for i, line1 in enumerate(hv_lines):
         for j, line2 in enumerate(hv_lines):
             if i != j:
-                intersecting_coords |= (line1 & line2)
+                intersecting_coords |= line1 & line2
     return len(intersecting_coords)
-        
+
 
 # submit(1, part1(lines))
 
@@ -62,7 +62,7 @@ def part2(lines: List[str]) -> int:
         cl = set()
         if x1 == x2:
             my, may = min(y1, y2), max(y1, y2)
-            for y in range(my,  may + 1):
+            for y in range(my, may + 1):
                 cl.add((x1, y))
         elif y1 == y2:
             mix, mx = min(x1, x2), max(x1, x2)
@@ -72,20 +72,18 @@ def part2(lines: List[str]) -> int:
             if x1 > x2:
                 x1, x2 = x2, x1
                 y1, y2 = y2, y1
-            diry = int(copysign(1, y2 - y1)/copysign(1, x2 - x1))
+            diry = int(copysign(1, y2 - y1) / copysign(1, x2 - x1))
 
             for i in range(abs(x2 - x1) + 1):
-                cl.add((x1 + i, y1 + i*diry))
-
+                cl.add((x1 + i, y1 + i * diry))
 
         hv_lines.append(cl)
     intersecting_coords = set()
     for i, line1 in enumerate(hv_lines):
         for j, line2 in enumerate(hv_lines):
             if i != j:
-                intersecting_coords |= (line1 & line2)
+                intersecting_coords |= line1 & line2
     return len(intersecting_coords)
 
+
 submit(2, part2(lines))
-
-

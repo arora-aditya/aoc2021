@@ -18,6 +18,7 @@ RED = "red"
 GREEN = "green"
 BLUE = "blue"
 
+
 def get_cookie():
     load_dotenv()
     return os.getenv("COOKIE")
@@ -31,10 +32,12 @@ def setup(d):
     global DAY
     DAY = d
 
+
 def read_file(day):
     with open(f"./inputs/input{day}.txt", "r") as f:
         lines = f.readlines()
     return [line.strip() for line in lines]
+
 
 def set_date():
     global DAY
@@ -43,7 +46,11 @@ def set_date():
     y, m, d = now.year, now.month, now.day
 
     if m != 12 or (m == 12 and d > 25):
-        print(colored("ERROR: year and day not set, and no event currently running!\n", RED))
+        print(
+            colored(
+                "ERROR: year and day not set, and no event currently running!\n", RED
+            )
+        )
         sys.exit(1)
 
     print("Year and day not set, assuming today: Dec {}, {}.\n", d, y)
@@ -64,10 +71,10 @@ def check_or_die(resp):
 
 
 def submit(part, answer, force=False):
-    if answer == float('inf'):
+    if answer == float("inf"):
         print(colored("∞ not submitted", BLUE))
         return
-    
+
     if len(read_file(DAY)) < 50 and not force:
         print(colored(f"{answer} ==> Are you sure this isn't the sample?", RED))
         return
@@ -75,15 +82,9 @@ def submit(part, answer, force=False):
     if not is_setup():
         set_date()
 
-    cookies = {
-        "session": get_cookie()
-    }
+    cookies = {"session": get_cookie()}
     data = {"level": part, "answer": answer}
-    response = post(
-        url=URL.format(YEAR, DAY, "answer"),
-        data=data,
-        cookies=cookies,
-    )
+    response = post(url=URL.format(YEAR, DAY, "answer"), data=data, cookies=cookies,)
 
     check_or_die(response)
 

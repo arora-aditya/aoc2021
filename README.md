@@ -14,23 +14,7 @@ Day | Problem                                                             | Part
 06  | [Lanternfish](https://adventofcode.com/2021/day/6)                  | 722        | 101        | 
 07  | [The Treachery of Whales](https://adventofcode.com/2021/day/7)      | 592        | 1109       | 
 08  | [Seven Segment Search](https://adventofcode.com/2021/day/8)         | 327        | 229        | 
-09  | [](https://adventofcode.com/2021/day/9)                             |            |            | 
-10  | [](https://adventofcode.com/2021/day/10)                            |            |            | 
-11  | [](https://adventofcode.com/2021/day/11)                            |            |            | 
-12  | [](https://adventofcode.com/2021/day/12)                            |            |            | 
-13  | [](https://adventofcode.com/2021/day/13)                            |            |            | 
-14  | [](https://adventofcode.com/2021/day/14)                            |            |            | 
-15  | [](https://adventofcode.com/2021/day/15)                            |            |            | 
-16  | [](https://adventofcode.com/2021/day/16)                            |            |            | 
-17  | [](https://adventofcode.com/2021/day/17)                            |            |            | 
-18  | [](https://adventofcode.com/2021/day/18)                            |            |            | 
-19  | [](https://adventofcode.com/2021/day/19)                            |            |            | 
-20  | [](https://adventofcode.com/2021/day/20)                            |            |            | 
-21  | [](https://adventofcode.com/2021/day/21)                            |            |            | 
-22  | [](https://adventofcode.com/2021/day/22)                            |            |            | 
-23  | [](https://adventofcode.com/2021/day/23)                            |            |            | 
-24  | [](https://adventofcode.com/2021/day/24)                            |            |            | 
-25  | [](https://adventofcode.com/2021/day/25)                            |            |            | 
+09  | [Smoke Basin](https://adventofcode.com/2021/day/9)                  | 650        | 318        | 
 
 
-Auto-Generated at 2021-12-08 00:54:18.901960
+Auto-Generated at 2021-12-09 01:06:26.285053

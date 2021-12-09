@@ -3,7 +3,7 @@ from collections import *
 from functools import lru_cache
 from pprint import pprint as pp
 from math import *
-from helper.submit.submit import *
+from helper.submit import *
 from utils import *
 
 
@@ -26,7 +26,6 @@ def part1(lines: List[str], days=80) -> int:
                 next_state[k - 1] += ct
         state = next_state.copy()
     return sum(next_state.values())
-            
 
 
 submit(1, part1(lines), force=True)
@@ -37,6 +36,5 @@ submit(1, part1(lines), force=True)
 def part2(lines: List[str]) -> int:
     return part1(lines, days=256)
 
+
 submit(2, part2(lines), force=True)
-
-

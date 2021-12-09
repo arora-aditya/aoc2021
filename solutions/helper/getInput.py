@@ -6,15 +6,14 @@ from requests import get
 
 YEAR = 2021
 
+
 def get_cookie():
     load_dotenv()
     return os.getenv("COOKIE")
 
 
 def download(url: str, file_name: str):
-    cookies = {
-        "session": get_cookie()
-    }
+    cookies = {"session": get_cookie()}
     response = get(url, cookies=cookies)
     if not response.content.startswith(b"Please don't"):
         with open(file_name, "wb") as file:
@@ -29,7 +28,7 @@ def create_source_file(d: int):
             "from functools import lru_cache\n",
             "from pprint import pprint as pp\n",
             "from math import *\n",
-            "from helper.submit.submit import *\n",
+            "from helper.submit import *\n",
             "from utils import *\n",
             "\n\n",
             f"DAY = {d}\n",
@@ -37,19 +36,17 @@ def create_source_file(d: int):
             "lines = read_file(DAY)\n",
             "\n\n",
             "# Part 1\n",
-            "#"*50,
+            "#" * 50,
             "\ndef part1(lines: List[str]) -> int:",
-            "\n    return float(\"inf\")",
-            "\n"*2,
-            "submit(1, part1(lines), force=False)\n"
-            "\n\n",
+            '\n    return float("inf")',
+            "\n" * 2,
+            "submit(1, part1(lines), force=False)\n" "\n\n",
             "# Part 2\n",
-            "#"*50,
+            "#" * 50,
             "\ndef part2(lines: List[str]) -> int:",
-            "\n    return float(\"inf\")",
-            "\n"*2,
-            "submit(2, part2(lines), force=False)\n"
-            "\n\n",
+            '\n    return float("inf")',
+            "\n" * 2,
+            "submit(2, part2(lines), force=False)\n" "\n\n",
         ]
         file.writelines(lines)
 
@@ -67,9 +64,10 @@ def get_day_from_args():
     return int(sys.argv[1])
 
 
-day = get_day_from_args()
+if __name__ == "__main__":
+    day = get_day_from_args()
 
-if download_input_for_day(day):
-    create_source_file(day)
-else:
-    print("input already exists")
+    if download_input_for_day(day):
+        create_source_file(day)
+    else:
+        print("input already exists")

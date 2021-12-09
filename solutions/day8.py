@@ -3,7 +3,7 @@ from collections import *
 from functools import lru_cache
 from pprint import pprint as pp
 from math import *
-from helper.submit.submit import *
+from helper.submit import *
 from utils import *
 
 
@@ -22,6 +22,7 @@ def part1(lines: List[str]) -> int:
         for word in words:
             C[len(word)] += 1
     return C[2] + C[3] + C[4] + C[7]
+
 
 submit(1, part1(lines), force=False)
 
@@ -69,7 +70,7 @@ def part2(lines: List[str]) -> int:
             if len(f - seven_segments) == 2:
                 mapping["".join(sorted(f))] = 3
                 three_segments = f
-                
+
             if len(f - six_segments) == 0:
                 mapping["".join(sorted(f))] = 5
                 five_segments = f
@@ -84,11 +85,7 @@ def part2(lines: List[str]) -> int:
             i += str(mapping["".join(sorted(word))])
         su += int(i)
 
-
-
-
     return su
 
+
 submit(2, part2(lines), force=False)
-
-

@@ -3,7 +3,7 @@ from collections import *
 from functools import lru_cache
 from pprint import pprint as pp
 from math import *
-from helper.submit.submit import *
+from helper.submit import *
 from utils import *
 
 
@@ -23,13 +23,14 @@ def part1(lines: List[str]) -> int:
         epsilon += c.most_common()[-1][0]
     return int(game_rate, 2) * int(epsilon, 2)
 
+
 submit(1, part1(lines))
 
 
 # Part 2
 ##################################################
 def part2(lines: List[str]) -> int:
-    save_lines = lines    
+    save_lines = lines
     position = 0
     while len(lines) > 1 and position < len(lines[0]):
         linesT = list(zip(*lines))
@@ -54,11 +55,8 @@ def part2(lines: List[str]) -> int:
         lines = [x for x in lines if x[position] == least_common]
         position += 1
     co2 = int(lines[0], 2)
-    
+
     return co2 * oxygen_gen
-        
 
 
 submit(2, part2(lines))
-
-

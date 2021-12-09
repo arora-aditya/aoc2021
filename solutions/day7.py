@@ -3,7 +3,7 @@ from collections import *
 from functools import lru_cache
 from pprint import pprint as pp
 from math import *
-from helper.submit.submit import *
+from helper.submit import *
 from statistics import median
 from utils import *
 
@@ -18,7 +18,8 @@ lines = read_file(DAY)
 def part1(lines: List[str]) -> int:
     l = list(map(int, lines[0].split(",")))
     k = median(l)
-    return int(sum(map(lambda x: abs(x-k), l)))
+    return int(sum(map(lambda x: abs(x - k), l)))
+
 
 submit(1, part1(lines), force=True)
 
@@ -26,7 +27,8 @@ submit(1, part1(lines), force=True)
 # Part 2
 ##################################################
 def su(k):
-    return k*(k+1)//2
+    return k * (k + 1) // 2
+
 
 def part2(lines: List[str]) -> int:
     l = list(map(int, lines[0].split(",")))
@@ -39,6 +41,5 @@ def part2(lines: List[str]) -> int:
 
     return best
 
+
 submit(2, part2(lines), force=True)
-
-

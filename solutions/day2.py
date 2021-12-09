@@ -3,7 +3,7 @@ from collections import *
 from functools import lru_cache
 from pprint import pprint as pp
 from math import *
-from helper.submit.submit import *
+from helper.submit import *
 from utils import *
 
 
@@ -20,13 +20,14 @@ def part1(lines: List[str]) -> int:
         dir, dist = line.split(" ")
         dist = int(dist)
         if dir.startswith("f"):
-            coords += dist 
+            coords += dist
         elif dir.startswith("d"):
             coords -= dist * 1j
         elif dir.startswith("u"):
             coords += dist * 1j
-    
+
     return int(abs(coords.real) * abs(coords.imag))
+
 
 submit(1, part1(lines))
 
@@ -40,15 +41,14 @@ def part2(lines: List[str]) -> int:
         dir, dist = line.split(" ")
         dist = int(dist)
         if dir.startswith("f"):
-            coords += dist 
+            coords += dist
             coords += aim * dist * 1j
         elif dir.startswith("d"):
             aim += dist
         elif dir.startswith("u"):
             aim -= dist
-    
+
     return int(abs(coords.real) * abs(coords.imag))
 
+
 submit(2, part2(lines))
-
-

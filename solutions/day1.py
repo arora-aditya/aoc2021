@@ -1,5 +1,5 @@
 from collections import Counter
-from helper.submit.submit import *
+from helper.submit import *
 from utils import read_file_int
 
 DAY = 1
@@ -21,8 +21,8 @@ submit(1, ans)
 
 ans = 0
 prev = sum(file[0:3])
-for i in range(1, len(file)-2):
-    su = sum(file[i:i+3])
+for i in range(1, len(file) - 2):
+    su = sum(file[i : i + 3])
     if su > prev:
         ans += 1
     prev = su
