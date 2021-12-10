@@ -15,6 +15,7 @@ Day | Problem                                                             | Part
 07  | [The Treachery of Whales](https://adventofcode.com/2021/day/7)      | 592        | 1109       | 
 08  | [Seven Segment Search](https://adventofcode.com/2021/day/8)         | 327        | 229        | 
 09  | [Smoke Basin](https://adventofcode.com/2021/day/9)                  | 650        | 318        | 
+10  | [Syntax Scoring](https://adventofcode.com/2021/day/10)              | 527        | 889        | 
 
 
-Auto-Generated at 2021-12-09 01:06:26.285053
+Auto-Generated at 2021-12-10 00:15:54.439790

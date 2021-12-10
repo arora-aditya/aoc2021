@@ -28,6 +28,7 @@ def create_source_file(d: int):
             "from functools import lru_cache\n",
             "from pprint import pprint as pp\n",
             "from math import *\n",
+            "from statistics import *\n",
             "from helper.submit import *\n",
             "from utils import *\n",
             "\n\n",
