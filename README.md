@@ -16,6 +16,7 @@ Day | Problem                                                             | Part
 08  | [Seven Segment Search](https://adventofcode.com/2021/day/8)         | 327        | 229        | 
 09  | [Smoke Basin](https://adventofcode.com/2021/day/9)                  | 650        | 318        | 
 10  | [Syntax Scoring](https://adventofcode.com/2021/day/10)              | 527        | 889        | 
+11  | [Dumbo Octopus](https://adventofcode.com/2021/day/11)               | 650        | 474        | 
 
 
-Auto-Generated at 2021-12-10 00:15:54.439790
+Auto-Generated at 2021-12-11 00:17:40.061094
